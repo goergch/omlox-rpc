@@ -1,7 +1,15 @@
 var stdin = process.openStdin();
 
 const OmloxRPC = new require('./lib/omlox_rpc');
-const omloxRPC = new OmloxRPC("ws://localhost:8081/v1/ws/rpc",[{methodname:'hello'}, {methodname:'test', zoneid: "7F9C779C-520E-4ECA-91FF-D1CFC74D7DAD"}]);
+const omloxRPC = new OmloxRPC("ws://localhost:8081/v1/ws/rpc");
+omloxRPC.on('wsConnected',(connected)=>{
+    if(connected){
+        omloxRPC.registerMethodCall('hello',(methodName, params,cb)=>{
+            cb(null, "Echo for " + methodName)
+        },[]);
+    }
+    
+})
 omloxRPC.connect();
 
 var readline = require('readline');
