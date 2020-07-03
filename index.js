@@ -1,1 +1,1 @@
-module.exports.OmloxRPC = require('./lib/omlox_rpc');
+module.exports = require('./lib/omlox_rpc');
