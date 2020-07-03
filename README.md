@@ -1,0 +1,1 @@
+This is the library for using the JSON RPC "Sensor-Actor" Interface of the omlox Hub.

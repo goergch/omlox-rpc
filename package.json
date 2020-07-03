@@ -1,20 +1,11 @@
 {
-  "name": "json_rpc_zone",
-  "version": "1.0.0",
+  "name": "omlox-rpc",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Görg",
+  "license": "BSD-3-Clause",
+  "main": "index.json",
   "dependencies": {
-    "async": "^3.2.0",
-    "jayson": "^3.3.3",
-    "json-rpc2": "^2.0.0",
-    "jsonrpc-lite": "^2.1.0",
-    "node-json-rpc": "0.0.1",
-    "rpc-websockets": "^5.2.2",
     "websocket": "^1.0.31",
     "winston": "^3.3.3"
   }
