@@ -9,6 +9,11 @@ omloxRPC.on('wsConnected', (connected) => {
     }, []);
   }
 });
+omloxRPC.on('connectionStateChanged', (stateObj) => {
+  console.log(`Old State: ${stateObj.oldState}`);
+  console.log(`New State: ${stateObj.newState}`);
+});
+
 omloxRPC.connect();
 
 const rl = readline.createInterface(process.stdin, process.stdout);
