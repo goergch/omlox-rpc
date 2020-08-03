@@ -24,7 +24,7 @@ rl.on('line', (line) => {
     rl.close();
   } else if (line.startsWith('call')) {
     const elements = line.split(' ');
-    omloxRPC.callMethod(elements[1])
+    omloxRPC.callMethod(elements[1], undefined, OmloxRPC.CALLMODES.AGGREGATE, 5000)
       .then((result) => rl.write(JSON.stringify(result)))
       .catch((err) => rl.write(err));
   }

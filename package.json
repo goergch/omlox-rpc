@@ -4,7 +4,7 @@
   "description": "",
   "author": "Christian Görg",
   "license": "BSD-3-Clause",
-  "main": "index.json",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint lib --ext .js"
   },
